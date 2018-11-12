@@ -2,13 +2,24 @@
 
 This is a presentation given at SEM.js 11/2018.
 
-Creating presentations using MDX-Deck & Code-Surfer. Includes a the informational deck and the base-demo deck.
+Creating presentations using MDX-Deck & Code-Surfer. Includes a the [informational deck](./deck.js) and the [demo deck](./demo.mdx). An additional how-to guide on theming mdx-decks is included in the [theming guide](./theming.md).
 
 Wnat to know more about SEMjs, visit:
 
 - [SEMjs](https://www.meetup.com/SEM-JS/)
 - [SEMjs > YouTube](https://www.youtube.com/channel/UC0mZnyjQpFUfcqMtMZjorXw)
 - [SEMjs > Github](https://github.com/sem-js)
+
+**Table of Contents**
+
+- [Sensational Slides with MDX-Deck](#sensational-slides-with-mdx-deck)
+  - [Install](#install)
+  - [Getting Started](#getting-started)
+  - [MX-Deck Keyboard Shortcuts](#mx-deck-keyboard-shortcuts)
+  - [Presentation Modes](#presentation-modes)
+  - [Speaker Notes](#speaker-notes)
+  - [Resources](#resources)
+
 
 ## Install
 
