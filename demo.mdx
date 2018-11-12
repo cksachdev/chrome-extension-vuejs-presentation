@@ -1,0 +1,306 @@
+import { Head, Appear, Notes, Code } from "mdx-deck";
+import { Invert, Split } from "mdx-deck/layouts";
+import { default as base, future, code, hack, swiss } from "mdx-deck/themes";
+import demoTheme from "./src/themes/demo.js";
+import DemoLayout from "./src/layouts/demo.js";
+import * as colors from "./src/colors.js"
+
+export const theme = {
+    ...demoTheme
+}
+
+<Head>
+    <title>MDX-Deck Demo</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
+    <link rel="stylesheet" href="./assets/css/imports.css" />
+</Head>
+
+# Demo
+---
+# Install
+
+```notes
+Just a another javascript package
+
+Manually create a directory on your computer `npm init my-deck`, or use
+the quick start command `npm init deck my-deck`
+
+(`deck` in this case is just the initilizer which is installed by `npx`)
+```
+---
+# My First Slide
+
+```notes
+- `deck.mdx` file contains all of the markdown for your slides...
+- Separate slides using `---`
+- Write in markdown syntax
+```
+---
+# Multiple Slides
+---
+# Using Markdown
+
+```notes
+# h1
+## h2
+### h3
+
+- First
+- Second
+- Third
+
+paragraph text
+
+[Github > MDX-Deck](https://github.com/jxnblk/mdx-deck)
+```
+---
+# Using JSX
+
+```notes
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+
+<ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+</ul>
+
+paragraph text
+
+<a href="https://github.com/jxnblk/mdx-deck">Github > MDX-Deck</a>
+```
+---
+# Using Built-in Components- `<Appear>`
+
+```notes
+See [built-in components](https://github.com/jxnblk/mdx-deck/blob/master/docs/components.md)
+<Head></Head>
+
+<ul>
+  <Appear>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+  </Appear>
+</ul>
+```
+---
+# Using Built-in Components - `notes` codeblock
+---
+# Using Built-in Components - `<Notes>`
+
+<Notes>
+
+</Notes>
+
+```notes
+
+<Notes>
+
+**Markdown**
+
+- First
+- Second
+- Third
+
+</Notes>
+
+AND
+
+<Notes>
+  <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+  </ul>
+</Notes>
+```
+---
+# Using a Custom Component
+
+```notes
+- import your component
+  import { DayNightToggle } from "./src/components";
+  <DayNightToggle />
+
+Attributions:
+Inspiration – https://dribbble.com/shots/1909289-Day-Night-Toggle-Button-GIF?list=searches&tag=toggle&offset=8
+Pens
+- https://codepen.io/jsndks/pen/qEXzOQ
+- https://codepen.io/ashleynolan/pen/wBppKz
+```
+---
+# Adding custom styles
+
+```notes
+import { BlinkingText } from "./src/components";
+
+<div style={{
+    backgroundColor: "darkslategrey",
+    padding: "1rem",
+    borderRadius: "1rem"
+}}>
+    <BlinkingText>flash</BlinkingText>
+    {""}
+    <h1 style={{color: colors.vueGreen}}>Toggle Me</h1>
+</div>
+
+```
+---
+## Using a Built-in Theme
+
+```notes
+- Use future from themes
+[built-in themes](https://github.com/jxnblk/mdx-deck/blob/master/docs/themes.md)
+
+import { future, code, hack, swiss } from "mdx-deck/themes";
+or
+export { future as theme } from "mdx-deck/themes";
+```
+---
+## Extending a Built-in Theme
+
+Rump sausage ham hock frankfurter pork. Ham tongue meatloaf tenderloin, chuck pork belly capicola cupim cow salami biltong.
+
+Content by [baconipsum](https://baconipsum.com/)
+
+```notes
+import { default as base } from "mdx-deck/themes";
+or
+export const theme = {
+    ...base,
+    p: {
+        fontSize: "1.5rem",
+        color: colors.reduxPurp
+    },
+    colors: {
+        ...base.colors,
+        background: "darkgrey"
+    },
+}
+```
+---
+## Creating a Custom Theme
+
+Capicola shank fatback, tail short loin venison buffalo rump frankfurter corned beef andouille chicken sausage.
+
+Content by [baconipsum](https://baconipsum.com/)
+
+```notes
+- Use ./src/themes/demo
+
+export { demo as theme } from "./themes/demo.js";
+```
+---
+## Adding a Built-in Layout
+
+Salami flank jowl swine beef ribs. Tongue spare ribs salami ham jerky meatloaf. Pork chop bresaola jerky strip steak, rump ham drumstick spare ribs. Shank alcatra turducken jerky rump.
+
+Content by [baconipsum](https://baconipsum.com/)
+
+```notes
+- [built-in layout](https://github.com/jxnblk/mdx-deck/blob/master/docs/components.md#layouts)
+
+import { Invert, Split } from "mdx-deck/layouts";
+
+export default Invert
+export default Split
+```
+---
+## Creating a Custom Layout
+
+Frankfurter rump biltong, meatball corned beef filet mignon ribeye beef salami leberkas turkey. Rump chicken meatloaf, hamburger salami swine capicola tail ham.
+
+Content by [baconipsum](https://baconipsum.com/)
+
+```notes
+import DemoLayout from "./layouts/demo.js";
+
+export default DemoLayout
+```
+---
+# Adding `notes`
+---
+# Presentation Modes
+
+```notes
+Key         | Description
+----------- | -----------
+Option + P  | Toggle [Presenter Mode](#presenter-mode)
+Option + O  | Toggle [Overview Mode](#overview-mode)
+Option + G  | Toggle grid view mode
+
+[Keyboard Shortcuts](https://github.com/jxnblk/mdx-deck#keyboard-shortcuts)
+```
+---
+# CLI Options
+
+```notes
+-p --port     Dev server port
+--no-open     Prevent from opening in default browser
+-d --out-dir  Output directory for exporting
+--no-html     Disable static HTML rendering
+--out-file    Filename for screenshot or PDF export
+--width       Width in pixels
+--height      Height in pixels
+--webpack     Path to webpack config file
+```
+---
+# Scripts
+
+```notes
+(pdf, screenshot)
+"scripts": {
+    "build": "mdx-deck build deck.js",
+    "start": "mdx-deck deck.js",
+    "pdf": "mdx-deck pdf deck.js",
+    "screenshot": "mdx-deck screenshot deck.js",
+}
+```
+---
+# Plugins
+Code Surfer
+---
+import { CodeSurfer } from "mdx-deck-code-surfer"
+// dark theme
+import dracula from "prism-react-renderer/themes/dracula"
+// lite theme
+
+<CodeSurfer
+  title="Code Surfer"
+  code={require("!raw-loader!./src/components/index.js")}
+  lang="javascript"
+  showNumbers={true}
+  theme={dracula}
+  steps={[
+    { notes: "file: ./src/components/index.js"},
+    { lines: [1], notes: "Zooooom! 🚗" },
+    { lines: [3, 7, 11, 15, 19], notes: "Highlight single lines" },
+    { range: [3, 5], notes: "Highlight a range" },
+    { lines: [7, 8, 9, 15, 16, 17], notes: "Multiple sections" },
+    { range: [19, 30], notes: "A single component" },
+    { tokens: { 3: [1, 5], 7: [1, 5], 11: [1, 5], 15: [1, 5], 19: [1, 5] },
+        notes: "Using tokens: 'export', 'component name'" }
+  ]}
+/>
+
+```notes
+  import dracula from "prism-react-renderer/themes/dracula"
+  import vsDark from "prism-react-renderer/themes/vsDark"
+  theme={dracula}
+
+  code-surfer uses prism for styling it's components. However,
+  the import is different than the syntax highlighting import for
+  mdx-deck code blocks written in markdown.
+
+- [Code Surfer](https://github.com/pomber/code-surfer)
+- [Theming > prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)
+```
+---
+# FIN
+<Appear>
+  <h2>Questions?</h2>
+</Appear>

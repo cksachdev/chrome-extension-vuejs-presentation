@@ -1,0 +1,172 @@
+import { Appear, Notes, Code } from "mdx-deck";
+import { CodeSurfer } from "mdx-deck-code-surfer"
+import dracula from "prism-react-renderer/themes/dracula"
+import { Center } from "./components";
+
+
+## What is mdx-deck?
+
+<Appear>
+    <div>
+        <Center>Just MDX</Center>
+        <br />
+    </div>
+    <div>
+        <Center><em>With</em> built-in utilities for creating presentation slides!</Center>
+    </div>
+</Appear>
+
+
+```notes
+MDX-deck is a tool that combines MDX
+```
+---
+
+<CodeSurfer
+  title="Basic Use - Markdown"
+  code={require("!raw-loader!./snippets/markdown.md")}
+  lang="markdown"
+  showNumbers={false}
+  theme={dracula}
+  steps={[
+    { notes: "file: ./snippets/markdown.md"},
+    { range: [1, 3], notes: "...headings" },
+    { range: [5, 7], notes: "...lists" },
+    { range: [1, 11], notes: "...it's all available!" },
+  ]}
+/>
+
+---
+# h1
+## h2
+### h3
+
+- First
+- Second
+- Third
+
+paragraph text
+
+[Github > MDX-Deck](https://github.com/jxnblk/mdx-deck)
+
+```notes
+rendered output
+```
+---
+
+<CodeSurfer
+  title="Basic Use - JSX"
+  code={require("!raw-loader!./snippets/html.js")}
+  lang="html"
+  showNumbers={false}
+  theme={dracula}
+  steps={[
+    { notes: "file: ./snippets/markdown.md"},
+    { range: [2, 4], notes: "...headings" },
+    { range: [6, 10], notes: "...lists" },
+    { range: [1, 15], notes: "...it's all available!" },
+  ]}
+/>
+
+```notes
+Difference in rendered output???
+
+- Your theme is applied only to the markdown you write.
+- JSX will not inherit theme styles.
+```
+
+---
+
+<div style={{
+    textAlign: "center"
+  }}>
+    <h1 style={{color: "#61dafb"}}>H1</h1>
+    <h2 style={{color: "#61dafb"}}>H2</h2>
+    <h3 style={{color: "#61dafb"}}>H3</h3>
+    <ul>
+        <li style={{ "list-style-type": "square", textAlign: "left" }}>First</li>
+        <li style={{ "list-style-type": "square", textAlign: "left" }}>Second</li>
+        <li style={{ "list-style-type": "square", textAlign: "left" }}>Third</li>
+    </ul>
+    <p>paragraph text</p>
+    <a style={{color: "#61dafb"}} href="https://github.com/jxnblk/mdx-deck">Github > MDX-Deck</a>
+</div>
+
+```notes
+rendered output
+```
+
+---
+## What Comes Baked-in
+
+We already talked about MDX
+
+- 📝 Write presentations in markdown
+- ⚛️ Import and use React components
+- 💅 Customizable themes and components
+- 0️⃣ Zero-config CLI
+- 💁 Presenter mode
+- 📓 Speaker notes
+
+```notes
+We'll review these in a moment
+```
+---
+
+## Pro/Con - Upsides
+
+- Built on top of markdown & jsx
+- Markdown is quick & easy to write
+- Responsive slides
+- Iteractivity & demos (as components) baked into the slides
+- Runs locally or in the cloud.
+- Publish and share with github, bitbucket, other vcs
+- Export to different formats (html, pdf)
+- Open source
+
+✨The limit is what you can create ✨
+
+<Notes>
+
+- Built on technology you work with
+  - Having to learn & stay up-to-date with specific software just for presentations (like MS PowerPoint)
+- Runs locally
+  - No need for special software to run it (no "runs on my machine" bs)
+  - Consider deploying to [github pages](https://pages.github.com/) (free) or [netlify] (http://whoisryosuke.com/blog/2018/mdx-deck-on-netlify/) using built-in [continuous deployment] (https://www.netlify.com/docs/continuous-deployment/)
+- Easy to publish, share/work with(in) a team
+  - github, bit bucket, other vcs
+- Open source
+  - Open source - you can contribute and share your work with others!
+
+**Other tools out there:**
+
+- Microsoft PowerPoint
+- Google Slides
+- [slides](https://slides.com/features)
+- [spectacle](https://github.com/FormidableLabs/spectacle) ReactJS based presentation library
+- [reveal](https://github.com/hakimel/reveal.js/)
+
+</Notes>
+
+---
+
+## Pro/Con - Downsides
+
+- It's new
+- Limitations of the tool
+- Challenging for those of us who are not developers
+- No GUI editor
+
+```notes
+- It's new.
+  - Some features are not currently do not exist
+- No GUI editor.
+  - Unless you consider an editor... Not for those prefering click-and-drag interfaces
+```
+
+---
+# Interactive Demo
+
+```notes
+This is the last slide. Start demo for the interactive demo.
+```
