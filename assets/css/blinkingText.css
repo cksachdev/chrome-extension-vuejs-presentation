@@ -1,0 +1,41 @@
+.blinkingText {
+    font-size: 4rem;
+    font-family: "Comic Sans MS", Curiour, Arial;
+    color: red;
+    animation: flashing-lights 3s cubic-bezier(0, 1, 0, 1) infinite;
+}
+
+blinkingText:before {
+    content: "FLASHING";
+    animation: flashing-text 6s infinite;
+}
+
+@keyframes flashing-lights {
+    0% {
+        color: red;
+    }
+    16.6% {
+        color: green;
+    }
+    33.3% {
+        color: purple;
+    }
+    50% {
+        color: yellow;
+    }
+    66.6% {
+        color: blue;
+    }
+    83.3% {
+        color: orange;
+    }
+}
+
+@keyframes flashing-text {
+    0% {
+        content: "FLASHING";
+    }
+    50% {
+        content: "TEXT";
+    }
+}
