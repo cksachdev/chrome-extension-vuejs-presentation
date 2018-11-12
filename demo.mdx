@@ -7,6 +7,15 @@ import * as colors from "./src/colors.js"
 
 export const theme = {
     ...demoTheme
+    // ...base,
+    // p: {
+    //     fontSize: "1.5rem",
+    //     color: colors.reduxPurp
+    // },
+    // colors: {
+    //     ...base.colors,
+    //     background: "darkgrey"
+    // },
 }
 
 <Head>
@@ -20,7 +29,7 @@ export const theme = {
 ---
 # Install
 
-```notes
+```js
 Just a another javascript package
 
 Manually create a directory on your computer `npm init my-deck`, or use
@@ -37,11 +46,11 @@ the quick start command `npm init deck my-deck`
 - Write in markdown syntax
 ```
 ---
-# Multiple Slides
+# Multiple slides
+----
 ---
 # Using Markdown
 
-```notes
 # h1
 ## h2
 ### h3
@@ -53,11 +62,10 @@ the quick start command `npm init deck my-deck`
 paragraph text
 
 [Github > MDX-Deck](https://github.com/jxnblk/mdx-deck)
-```
+
 ---
 # Using JSX
 
-```notes
 <h1>h1</h1>
 <h2>h2</h2>
 <h3>h3</h3>
@@ -71,9 +79,17 @@ paragraph text
 paragraph text
 
 <a href="https://github.com/jxnblk/mdx-deck">Github > MDX-Deck</a>
-```
+
 ---
 # Using Built-in Components- `<Appear>`
+
+<ul>
+  <Appear>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+  </Appear>
+</ul>
 
 ```notes
 See [built-in components](https://github.com/jxnblk/mdx-deck/blob/master/docs/components.md)
@@ -89,26 +105,13 @@ See [built-in components](https://github.com/jxnblk/mdx-deck/blob/master/docs/co
 ```
 ---
 # Using Built-in Components - `notes` codeblock
----
-# Using Built-in Components - `<Notes>`
-
-<Notes>
-
-</Notes>
 
 ```notes
+Jason's notes
+```
 
-<Notes>
-
-**Markdown**
-
-- First
-- Second
-- Third
-
-</Notes>
-
-AND
+---
+# Using Built-in Components - `<Notes>`
 
 <Notes>
   <ul>
@@ -117,9 +120,13 @@ AND
       <li>Third</li>
   </ul>
 </Notes>
-```
+
 ---
 # Using a Custom Component
+
+import { DayNightToggle } from "./src/components";
+
+<DayNightToggle />
 
 ```notes
 - import your component
@@ -135,7 +142,6 @@ Pens
 ---
 # Adding custom styles
 
-```notes
 import { BlinkingText } from "./src/components";
 
 <div style={{
@@ -147,6 +153,8 @@ import { BlinkingText } from "./src/components";
     {""}
     <h1 style={{color: colors.vueGreen}}>Toggle Me</h1>
 </div>
+
+```notes
 
 ```
 ---
@@ -195,6 +203,8 @@ Content by [baconipsum](https://baconipsum.com/)
 export { demo as theme } from "./themes/demo.js";
 ```
 ---
+export default Split
+
 ## Adding a Built-in Layout
 
 Salami flank jowl swine beef ribs. Tongue spare ribs salami ham jerky meatloaf. Pork chop bresaola jerky strip steak, rump ham drumstick spare ribs. Shank alcatra turducken jerky rump.
@@ -204,12 +214,14 @@ Content by [baconipsum](https://baconipsum.com/)
 ```notes
 - [built-in layout](https://github.com/jxnblk/mdx-deck/blob/master/docs/components.md#layouts)
 
-import { Invert, Split } from "mdx-deck/layouts";
 
 export default Invert
 export default Split
 ```
 ---
+
+export default DemoLayout
+
 ## Creating a Custom Layout
 
 Frankfurter rump biltong, meatball corned beef filet mignon ribeye beef salami leberkas turkey. Rump chicken meatloaf, hamburger salami swine capicola tail ham.
@@ -217,9 +229,7 @@ Frankfurter rump biltong, meatball corned beef filet mignon ribeye beef salami l
 Content by [baconipsum](https://baconipsum.com/)
 
 ```notes
-import DemoLayout from "./layouts/demo.js";
 
-export default DemoLayout
 ```
 ---
 # Adding `notes`
