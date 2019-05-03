@@ -1,6 +1,26 @@
+Resources
+https://www.youtube.com/watch?v=eUxVbVAitKM
+https://github.com/TylerLeonhardt/seattle-code-camp
+https://www.pscp.tv/w/1ynJOVOzAAqGR
+
+https://github.com/huixisheng/chrome-extensions/tree/01592980de1f53afee74387469b3775ec0ee438c
 # Sensational Slides with MDX-Deck
 
+
+https://github.com/HaNdTriX/generator-chrome-extension-kickstart
+
+
+http://yixi.pro/ChromeExtensionDocument/tut_oauth.html
+
+More sample: https://github.com/GoogleChrome/chrome-app-samples
+oauth https://src.chromium.org/viewvc/chrome/trunk/src/chrome/common/extensions/docs/examples/extensions/gdocs/
 This is a presentation given at SEM.js 11/2018.
+
+cool tools: https://github.com/didikee/Dev_Tools
+icon generation: https://android-material-icon-generator.bitdroid.de/#section-material-icons
+
+
+Extension samples: https://github.com/orbitbot/chrome-extensions-examples
 
 Creating presentations using MDX-Deck & Code-Surfer. Includes a the [informational deck](./deck.js) and the [demo deck](./demo.mdx). An additional how-to guide on theming mdx-decks is included in the [theming guide](./theming.md).
 
@@ -37,6 +57,52 @@ npm start      # run the presentation
 npm run demo   # run the demo
 ```
 
+```
+<div>
+    <ul>
+        <Appear>
+            <li><b>❤️ Power</b> through components</li>
+            <li><b>🔧 Customizable</b></li>
+            <li><b>📚 Markdown-based</b></li>
+            <li><b>🔥 Blazingly blazing fast</b></li>
+            <p>They even have a specification 😲</p>
+        </Appear>
+    </ul>
+</div>
+```
+
+```
+<Appear>
+    <div>
+        <Center>Just MDX</Center>
+        <br />
+    </div>
+    <div>
+        <Center><em>With</em> built-in utilities for creating presentation slides!</Center>
+    </div>
+</Appear>
+```
+
+```
+## Example of Customized MDX
+
+```js
+/* ./components */
+export const BlinkingText = ({ children: title }) => (
+    <h1 className="blinkingText">
+        {title}
+    </h1>
+)
+```
+Set the component inside your theme
+
+```js
+/* ./themes/MyTheme.js */
+components: { h6: BlinkingText }
+```
+
+---
+```
 
 ## MX-Deck Keyboard Shortcuts
 

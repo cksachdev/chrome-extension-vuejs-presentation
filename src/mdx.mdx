@@ -5,64 +5,16 @@ import MDXsvg from "../assets/images/mdx.svg"
 
 
 
-# Chrome extension
+###### Demo
+
 
 ---
 
 ## What is a Chrome extension?
 
 <!-- show an typewriter animation with the end as a smily/heart gif -->
-**Extensions** are small software programs that customize the browsing experience. They enable users to tailor **Chrome** functionality and behavior to individual needs or preferences. They are built on web technologies such as HTML, JavaScript, and CSS.
-
-
-<div>
-    <ul>
-        <Appear>
-            <li><b> &nbsp;&nbsp; ❤️ &nbsp; Power</b> through components</li>
-            <li><b>🔧 Customizable</b></li>
-            <li><b>📚 Markdown-based</b></li>
-            <li><b>🔥 Blazingly blazing fast</b></li>
-            <p>They even have a specification 😲</p>
-        </Appear>
-    </ul>
-</div>
-
-<Notes>
-**What is mdx?** A blending together markdown & jsx. More concretely, it's a markdown parser, loader and jsx renderer.
-
-- **Powerful:** MDX blends Markdown and JSX syntax
-- **Customizable**: Decide which component is rendered for each Markdown element (`{ h1: MyHeading }`).
-- **Markdown-based**: The simplicity and elegance of Markdown remains, you interleave JSX only when you want to.
-- **Blazingly blazing fast**: MDX has no runtime, all compilation occurs during the build stage
-
-**...but why use it?** It's extremely useful to quickly design system components, interweaving existing components with markdown.
-
-</Notes>
-
----
-
-## Example of Customized MDX
-
-```js
-/* ./components */
-export const BlinkingText = ({ children: title }) => (
-    <h1 className="blinkingText">
-        {title}
-    </h1>
-)
-```
-Set the component inside your theme
-
-```js
-/* ./themes/MyTheme.js */
-components: { h6: BlinkingText }
-```
-
----
-
-## Non flashy heading
-
-###### My Flashy Heading
+<p>**Extensions** are small software programs that customize the browsing experience. They enable users to tailor **Chrome** functionality and behavior to individual needs or preferences. They are built on web technologies such as HTML, JavaScript, and CSS.
+  </p>
 
 ```notes
 Example of the custom component `BlinkingText` assigned to the `h6` tag
