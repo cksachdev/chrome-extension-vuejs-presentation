@@ -4,16 +4,17 @@
     "description": "Slides for how to create presentation slides using mdx-deck and code-surfer. Written in mdx!",
     "main": "deck-mdx",
     "scripts": {
-        "start": "mdx-deck deck.js",
+        "start": "mdx-deck index.js",
         "//start": "Run on port 3100 cuz sometimes the default port 8080 is occupied by another service",
-        "start:3100": "mdx-deck deck.mdx -p 3100",
-        "demo": "mdx-deck demo.mdx -p 3101",
-        "build": "mdx-deck build deck.js",
-        "pdf": "mdx-deck pdf deck.js",
-        "screenshot": "mdx-deck screenshot deck.js",
+        "start:3100": "mdx-deck index.mdx -p 3100",
+        "demo": "mdx-deck index.mdx -p 3101",
+        "build": "mdx-deck build deck.js -d dist --no-html",
+        "pdf": "mdx-deck pdf index.js",
+        "screenshot": "mdx-deck screenshot index.js",
         "prettier": "prettier --write --tab-width 4 --print-width 80 \"./**/*.js\""
     },
     "devDependencies": {
+        "file-loader": "^2.0.0",
         "mdx-deck": "^1.7.7",
         "mdx-deck-code-surfer": "^0.5.3",
         "prism-react-renderer": "^0.1.4",
