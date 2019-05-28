@@ -10,8 +10,9 @@
         "demo": "mdx-deck index.mdx -p 3101",
         "build": "mdx-deck build deck.js -d dist --no-html",
         "pdf": "mdx-deck pdf index.js",
-        "screenshot": "mdx-deck screenshot index.js",
+        "screenshot": "mdx-deck screenshot deck.js -d dist",
         "prettier": "prettier --write --tab-width 4 --print-width 80 \"./**/*.js\"",
+        "doall": "npm run screenshot && npm run build && npm run deploy",
         "deploy": "gh-pages -d dist"
     },
     "devDependencies": {

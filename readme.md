@@ -4,6 +4,8 @@
 
 Presentation link: https://cksachdev.github.io/chrome-extension-vuejs-presentation/#0
 
+![alt text](https://cksachdev.github.io/chrome-extension-vuejs-presentation/card.png)
+
 ## Resources
 1. https://www.youtube.com/watch?v=eUxVbVAitKM
 2. https://github.com/TylerLeonhardt/seattle-code-camp
