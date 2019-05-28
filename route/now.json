@@ -1,0 +1,16 @@
+{
+    "name": "abloop-redirect",
+    "version": 2,
+    "alias": [
+        "www.abloop.in"
+    ],
+  "routes": [
+        {
+            "src": "/(.*)",
+            "status": 301,
+            "headers": {
+                "Location": "https://abloop.in/$1"
+            }
+        }
+    ]
+}

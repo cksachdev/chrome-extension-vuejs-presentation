@@ -11,10 +11,12 @@
         "build": "mdx-deck build deck.js -d dist --no-html",
         "pdf": "mdx-deck pdf index.js",
         "screenshot": "mdx-deck screenshot index.js",
-        "prettier": "prettier --write --tab-width 4 --print-width 80 \"./**/*.js\""
+        "prettier": "prettier --write --tab-width 4 --print-width 80 \"./**/*.js\"",
+        "deploy": "gh-pages -d dist"
     },
     "devDependencies": {
         "file-loader": "^2.0.0",
+        "gh-pages": "^2.0.1",
         "mdx-deck": "^1.7.7",
         "mdx-deck-code-surfer": "^0.5.3",
         "prism-react-renderer": "^0.1.4",
