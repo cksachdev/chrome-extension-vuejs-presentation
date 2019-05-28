@@ -2,6 +2,8 @@
 
 @Presented at https://awesomeconf.dev/ on 4th May 2019
 
+Presentation link: https://cksachdev.github.io/chrome-extension-vuejs-presentation/#0
+
 ## Resources
 1. https://www.youtube.com/watch?v=eUxVbVAitKM
 2. https://github.com/TylerLeonhardt/seattle-code-camp
