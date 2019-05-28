@@ -4,7 +4,7 @@
 
 Presentation link: https://cksachdev.github.io/chrome-extension-vuejs-presentation/#0
 
-![alt text](https://cksachdev.github.io/chrome-extension-vuejs-presentation/card.png)
+[![Presentation link](https://cksachdev.github.io/chrome-extension-vuejs-presentation/card.png)](https://cksachdev.github.io/chrome-extension-vuejs-presentation/#0)
 
 ## Resources
 1. https://www.youtube.com/watch?v=eUxVbVAitKM
